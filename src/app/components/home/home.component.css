@@ -1,0 +1,15 @@
+.btn-outline-light {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+/* color del fondo del navbar y su texto */
+.navbar {
+    background-color: #2A6CB9;
+    color: white;
+}
+
+.logoEscuela {
+    width: 180px;
+    display: flex;
+    justify-content: center;
+}

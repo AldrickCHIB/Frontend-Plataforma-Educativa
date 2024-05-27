@@ -1,0 +1,63 @@
+
+body{
+    background-image: url('../../../assets/imagenes/plataforma_fondo.png');
+}
+.card {
+    justify-content: center;
+    width: 300px;
+    margin: auto;
+    
+}
+
+.formulario{
+    padding-top: 15%;
+}
+/* cambian el color del campo dependiendo de la validacion si es correcta o no o si esta vacia */
+.ng-invalid.ng-touched:not(form) {
+    border-left: 5px solid red;
+}
+
+.ng-valid:not(form) {
+    border-left: 5px solid green;
+}
+
+.container {
+    min-height: 81.6vh;
+}
+
+/* ----------------iconos---------------- */
+.input-icon {
+    position: relative;
+    
+  }
+  
+  .input-with-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+   
+    
+  }
+
+  .mat-icon{
+    margin-left: 80%;
+}
+
+.botones{
+display: flex;    
+justify-content: space-between;
+align-items: center;
+
+}
+
+.remember{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.text{
+    padding-right: 6px;
+}

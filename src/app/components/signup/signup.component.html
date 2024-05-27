@@ -1,0 +1,232 @@
+<div class="container">
+  <div class="card card-">
+    <form id="loginform" autocomplete="off" [formGroup]="registerForm" (ngSubmit)="crearUsuario()">
+      <div class="formulario">
+
+
+        <!-----------------------Estatus --------------------------------->
+
+        <div>
+          <label for="status" class="form-label">Estatus</label>
+          <div class="select-icon">
+            <select type="string" class="form-control" id="status" [(ngModel)]="status" formControlName="status"
+              required>
+              <option [value]="null">Selecciona una opción</option>
+              <option value="Activo">Activo</option>
+              <option value="Inactivo">Inactivo</option>
+            </select>
+            <mat-icon matSuffix class="icon">arrow_drop_down</mat-icon>
+          </div>
+          <p class="alert alert-danger" [hidden]="!campoNoValido('status')" *ngIf="campoNoValido('status')">
+            El estatus del usuario es obligatorio.
+          </p>
+        </div>
+
+
+
+        <!-----------------------Tipo de usuario --------------------------------->
+
+        <div>
+          <label for="tipoUsuario" class="form-label">Tipo de Usuario</label>
+          <div class="select-icon">
+            <select type="string" class="form-control" id="tipoUsuario" [(ngModel)]="tipoUsuario"
+              formControlName="tipoUsuario" required>
+              <option [value]="null">Selecciona una opción</option>
+              <option value="Administrador">Administrador</option>
+              <option value="Profesor">Profesor</option>
+              <option value="Alumno">Alumnno</option>
+              <option value="Tutor">Tutor</option>
+            </select>
+            <mat-icon matSuffix class="icon">arrow_drop_down</mat-icon>
+          </div>
+          <p class="alert alert-danger" [hidden]="!campoNoValido('tipoUsuario')" *ngIf="campoNoValido('tipoUsuario')">
+            El tipo de usuario es obligatorio.
+          </p>
+        </div>
+
+
+        <!-----------------------nombre --------------------------------->
+
+        <div>
+          <label for="name" class="form-label">Nombre</label>
+          <div class="select-icon">
+            <input type="text" class="form-control" id="name" formControlName="name" required />
+            <mat-icon matSuffix class="icon">account_box</mat-icon>
+          </div>
+          <p class="alert alert-danger" [hidden]="!campoNoValido('name')" *ngIf="campoNoValido('name')">
+            El nombre es obligatorio.
+          </p>
+        </div>
+
+        <!----------------------- apellido paterno ------------------->
+
+        <div>
+          <label for="lastname" class="form-label">Apellido Paterno</label>
+          <div class="select-icon">
+            <input type="text" class="form-control" id="lastname" formControlName="lastname" required />
+            <mat-icon matSuffix class="icon">account_box</mat-icon>
+          </div>
+          <p class="alert alert-danger" [hidden]="!campoNoValido('lastname')" *ngIf="campoNoValido('lastname')">
+            El apellido materno es obligatorio.
+          </p>
+        </div>
+
+        <!----------------------------- Apellido materno --------------------->
+        <div class="mb-3">
+          <label for="secondlastname" class="form-label">Apellido Materno</label>
+          <div class="select-icon">
+            <input type="text" class="form-control" id="secondlastname" formControlName="secondlastname" required />
+            <mat-icon matSuffix class="icon">account_box</mat-icon>
+          </div>
+          <p class="alert alert-danger" [hidden]="!campoNoValido('secondlastname')"
+            *ngIf="campoNoValido('secondlastname')">
+            El apellido materno es obligatorio.
+          </p>
+        </div>
+
+
+        <!--------------------------  Grado -------------------------------->
+
+        <div class="mb-3">
+          <label for="grado" class="form-label">Grado</label>
+          <div class="select-icon">
+            <select type="string" class="form-control" id="grado" [(ngModel)]="grado" formControlName="grado" required>
+
+              <option [value]="null">Selecciona una opción</option>
+
+              <option value="1°preescolar">1°Preescolar</option>
+              <option value="2°preescolar">2°Preescolar</option>
+              <option value="3°preescolar">3°Preescolar</option>
+
+              <option value="1°primaria">1°Primaria</option>
+              <option value="2°primaria">2°Primaria</option>
+              <option value="3°primaria">3°Primaria</option>
+              <option value="4°primaria">4°Primaria</option>
+              <option value="5°primaria">5°Primaria</option>
+              <option value="6°primaria">6°Primaria</option>
+
+              <option value="1°secundaria">1°Secundaria</option>
+              <option value="2°secundaria">2°Secundaria</option>
+              <option value="3°secundaria">3°Secundaria</option>
+
+              <option value="NA">N/A</option>
+            </select>
+            <mat-icon matSuffix class="icon">equalizer</mat-icon>
+          </div>
+          <p class="alert alert-danger" [hidden]="!campoNoValido('grado')" *ngIf="campoNoValido('grado')">El grado es
+            obligatorio.</p>
+        </div>
+
+        <!--------- Correo --------------------------------->
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <div class="select-icon">
+            <input type="text" class="form-control" id="email" formControlName="email" required />
+            <mat-icon matSuffix class="icon">mail</mat-icon>
+          </div>
+          <p class="alert alert-danger" [hidden]="!campoNoValido('email')" *ngIf="campoNoValido('email')">El correo es
+            obligatorio.</p>
+        </div>
+
+        <!--------- Contraseña --------------------------------->
+
+        <div class="mb-3">
+          <label for="password" class="form-label">Contraseña</label>
+          <div class="select-icon">
+            <input type="password" class="form-control" id="password" formControlName="password" required />
+            <mat-icon matSuffix class="icon">lock</mat-icon>
+          </div>
+          <p class="alert alert-danger" [hidden]="!campoNoValido('password')" *ngIf="campoNoValido('password')">La
+            contraseña es obligatoria.</p>
+        </div>
+
+
+        <!--------- confirmar Contraseña --------------------------------->
+        <div class="mb-3">
+          <label for="password_confirmation" class="form-label">Confirmar Contraseña</label>
+          <div class="select-icon">
+            <input type="password" class="form-control" id="password_confirmation"
+              formControlName="password_confirmation" required />
+            <mat-icon matSuffix class="icon">lock</mat-icon>
+          </div>
+          <p class="alert alert-danger" [hidden]="!contrasenasNoValidas()" *ngIf="contrasenasNoValidas()">Las
+            contraseñas no coinciden.</p>
+          <p class="alert alert-danger" [hidden]="!campoVacio('password_confirmation')"
+            *ngIf="campoVacio('password_confirmation')">
+            Se requiere confirmar la contraseña.
+          </p>
+        </div>
+
+
+
+        <!---------Validado --------------------------------->
+
+        <div class="mb-3">
+          <label for="validado" class="form-label">Validado</label>
+          <div class="select-icon">
+            <select type="string" class="form-control" id="validado" [(ngModel)]="validado" formControlName="validado"
+              required>
+
+              <option [value]="null">Selecciona una opción</option>
+              <option value="Validado">Validado</option>
+              <option value="No validado">No validado</option>
+              <option value="Requiere validacion">Requiere validación</option>
+              <option value="Bloqueado">Bloqueado</option>
+              <option value="NA">No aplica</option>
+              <option value="Baja temporal">Baja temporal</option>
+
+            </select>
+            <mat-icon matSuffix class="icon">arrow_drop_down</mat-icon>
+          </div>
+          <p class="alert alert-danger" [hidden]="!campoNoValido('validado')" *ngIf="campoNoValido('validado')">Se
+            requiere validar.</p>
+        </div>
+      </div>
+    </form>
+    <!----------------------Grid Botonees------------------------>
+    <div class="container">
+      <div class="botones">
+
+        <button *ngIf="!usuario" mat-fab extended type="submit" class="registrar" (click)="crearUsuario()">
+          <div class="boton"> <span>Registrar</span> <mat-icon matSuffix>description</mat-icon></div>
+        </button>
+
+        <button *ngIf="usuario" mat-fab extended class="editar" (click)="editUser()">
+          <div class="boton"> <span>Editar</span> <mat-icon matSuffix>edit</mat-icon>
+          </div>
+        </button>
+
+        <button *ngIf="usuario" mat-fab extended class="cancelar" (click)="cancelarEdicion()">
+          <div class="boton"> <span>Cancelar</span> <mat-icon matSuffix>edit</mat-icon>
+          </div>
+        </button>
+        <!-- ---------------------------boton buscar -desactivado por que se agrego la barra de busqueda--------------------- -->
+        <!--  <button *ngIf="!usuario" mat-fab extended    class="buscar"  (click)="buscar()">
+              <div class="boton"> <span>Buscar</span> <mat-icon matSuffix>search</mat-icon>
+              </div>
+           </button> -->
+
+        <button *ngIf="!usuario" mat-fab extended class="limpiar" (click)="limpiarFormulario()">
+          <div class="boton"> <span>Limpiar</span> <mat-icon matSuffix>delete_sweep</mat-icon>
+          </div>
+        </button>
+
+
+
+        <!-- color #2f7965 -->
+        <button *ngIf="!usuario" mat-fab extended class="reportes" (click)="reportesExcel()">
+          <div class="boton"> <span>Reportes en Excel</span> <mat-icon matSuffix>description</mat-icon>
+          </div>
+        </button>
+
+        <button *ngIf="!usuario" mat-fab extended class="carga" (click)="cargaMasiva()">
+          <div class="boton"> <span>Carga Masiva</span> <mat-icon matSuffix>format_list_bulleted_add</mat-icon>
+          </div>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+</div>

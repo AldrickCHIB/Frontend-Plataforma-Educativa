@@ -1,0 +1,83 @@
+table {
+    width: 100%;
+  }
+  
+  .mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  td, th {
+    width: 20%;
+  }
+  .container{
+    padding: 15px 0px;
+  }
+
+  .example-tab-icon {
+    margin-right: 8px;
+  }
+
+  .example-icon {
+    padding: 0 0px;
+  }
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .mat-toolbar {
+    background-color: hsl(170, 63%, 40%);
+    border-radius:30px;
+  }
+
+
+  .mat-mdc-row:hover .mat-mdc-cell {
+    border-color: currentColor;
+  }
+  
+  .demo-row-is-clicked {
+    font-weight: bold;
+  }
+
+.buttonsTd{
+  display: flex;
+}
+
+  .button{
+display:flex;
+justify-content: center; /* Nueva propiedad */
+align-items: center; /* Nueva propiedad */
+  vertical-align: auto;
+  border-radius: 50%;
+  margin: 0;
+  margin-right: 10px;
+  transition: transform 0.3s ease-in-out;
+  border: none;
+  height: 34px;
+}
+
+/* Animaciones de los botones eliminar y editar */
+.button:hover {
+  transform: scale(1.1);
+}
+
+.editar{
+  background-color:  #2a5295;
+}
+
+.editar:hover {
+  background-color: #1c3d70;
+}
+
+.eliminar{
+  background-color: red;
+}
+
+.eliminar:hover {
+  background-color: darkred;
+}
+
+.icon{
+  color: white;
+ 
+}

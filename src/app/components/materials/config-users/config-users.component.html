@@ -1,0 +1,52 @@
+<div>
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span>Configuración de Usuarios</span>
+      <span class="example-spacer"></span>
+      <mat-icon
+        class="example-icon"
+        aria-hidden="false"
+        aria-label="Example user verified icon"
+        >admin_panel_settings</mat-icon
+      >
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+
+<!-- boton Administración de Usuarios,te lleva al contenido del mismo -->
+
+<mat-tab-group class="subMenu">
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon class="example-tab-icon" routerLink='adminUsers'>manage_accounts</mat-icon>
+      <button class="button" routerLink='adminUsers'>Administración de Usuarios</button>
+    </ng-template>
+  </mat-tab>
+<!-- boton Relacionar Alumnos-Padres,te lleva al contenido del mismo -->
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon class="example-tab-icon" routerLink='alumnos-padres'>supervised_user_circle</mat-icon>
+      <button class="button" routerLink='alumnos-padres'> Relacionar Alumnos-Padres</button>
+    </ng-template>
+  </mat-tab>
+<!-- boton Relacionar Alumnos-Grupos,te lleva al contenido del mismo -->
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon class="example-tab-icon" >groups</mat-icon>
+      <button class="button" >Relacionar Alumnos-Grupos</button>
+    </ng-template>
+  </mat-tab>
+<!-- boton Relacionar Profesores-Materias,te lleva al contenido del mismo -->
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon class="example-tab-icon" >science</mat-icon>
+      <button class="button" >Relacionar Profesores-Materias</button>
+    </ng-template>
+  </mat-tab>
+</mat-tab-group>
+
+
+
+
+
+<router-outlet></router-outlet>

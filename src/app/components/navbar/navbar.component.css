@@ -1,0 +1,37 @@
+.btn-outline-light {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.navbar{
+    background-color: #2A6CB9;
+    color: white;
+}
+
+.logoEscuela{
+    width: 180px;
+    display: flex;
+        justify-content: center;
+}
+.icon{
+    color:red;
+    display: flex;
+    
+}
+
+.btn{
+  
+    justify-content: center;
+    align-items: center;
+}
+.settings {
+    border-radius: 100px;
+    background-color: azure;
+
+}
+
+.logout {
+    border-radius: 100px;
+    background-color: azure;
+   
+}

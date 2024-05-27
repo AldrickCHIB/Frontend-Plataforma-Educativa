@@ -1,0 +1,30 @@
+.btn-outline-light {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.navbar {
+    background-color: #2A6CB9;
+    color: white;
+    width: 100%;
+    
+}
+
+.logoEscuela {
+    
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    background-image: url('/../assets/imagenes/blanco.jpg');
+    border-radius: 19px ;
+}
+
+
+.logoPlataforma{
+  
+        width: 162px;
+        display: flex;
+        justify-content: center;
+        background-image: url('/../assets/imagenes/blanco.jpg');
+        border-radius: 19px;
+}

@@ -1,0 +1,75 @@
+.example-tab-icon {
+    margin-right: 8px;
+  }
+
+  .example-icon {
+    padding: 0 0px;
+  }
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .mat-toolbar {
+    background-color: #e7aa25;
+    border-radius:30px;
+  }
+
+ .configusers{
+  display: grid;
+  grid-template-columns: repeat(4,  minmax(200px, auto));
+
+
+ }
+/* ------------------------separacion de "configuracion de usuarios" y el submenu------------------ */
+ .subMenu{
+  padding-top: 10px;
+ }
+
+ .example-action-button {
+  font-size: 14px;
+  font-weight: 500;
+  color: #3f51b5;
+  padding: 12px 20px;
+  margin: 0 10px;
+}
+
+.myButton {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.myButton:hover {
+  background-color: #45a049;
+}
+
+.config {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #130a0a;
+  border-radius: 20px;
+  border: 0;
+  
+}
+
+
+
+
+

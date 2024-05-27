@@ -1,0 +1,80 @@
+.nav-principal {
+    min-height: 9.5vh;
+
+}
+
+.footer {
+    background-color: #2A6CB9;
+    padding: .5em 0;
+    text-align: center;
+    justify-content: center;
+
+    min-height: 6.3vh;
+}
+
+.slide img {
+    height: 84vh;
+    object-fit: cover;
+    filter: brightness(.90);
+}
+
+.alert.alert-danger {
+    height: 30px;
+    padding: 0px 0px;
+}
+
+
+/*Componente: LOgin -  Card Header*/
+
+.card-title{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+/* --------------------------Estilos de navbars */
+.btn-outline-light {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.navbar {
+    background-color: #2A6CB9;
+    color: white;
+}
+
+.logoEscuela {
+    width: 180px;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* ------------------color de los titulos de tabla de usuarios------------------- */
+.mat-sort-header-content {
+    color: #2a6cb9;
+    font-weight: bolder;
+    }
+    
+
+    
+/* ------------------color del boton menú y sus submenus -cambian de color al pasar el mouse sobre ellos ------------------- */
+    .mat-mdc-menu-item:not([disabled]).cdk-program-focused, .mat-mdc-menu-item:not([disabled]).cdk-keyboard-focused, .mat-mdc-menu-item:not([disabled]).mat-mdc-menu-item-highlighted {
+        background-color: #2A6CB9 !important;
+        padding-top: 4px;
+        color: aliceblue;
+    }
+
+    .mat-mdc-menu-item:not([disabled]):hover {
+        background-color: var(--mat-menu-item-hover-state-layer-color);
+        background-color: #2A6CB9 !important;
+        padding-top: 4px;
+        color: aliceblue;
+
+    }
+
+  
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+

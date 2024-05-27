@@ -1,0 +1,62 @@
+<nav class="navbar navbar-light bg-ligth">
+  <div class="container-fluid">
+    <div>
+      <img
+        class="logoEscuela"
+        src="assets/imagenes/plataforma_logo.png"
+        alt="Descripción de la imagen"
+        width="30%"
+      />
+    </div>
+
+    <div>
+      <a class="navbar navbar-brand" routerLink="/">Plataforma Educativa</a>
+    </div>
+
+    <div>
+      <div>
+        <!-- Login -->
+        <div >
+        <button
+          type="button"
+          class="btn btn-outline-light"
+          routerLink="/login"
+          *ngIf="!isLoggedIn"
+        >
+          Login <mat-icon   matSuffix>edit</mat-icon>
+        </button>
+        </div>
+<!-- ----------------------Funcion del Nombre del Usuario Registrado---------------------------------------- -->
+ <!-- -----NgIF----funcion que muestra el boton solo si el usuario esta logueado------------- -->
+        <a *ngIf="isLoggedIn"> Bienvenid&#64;:  {{ data?.name }} {{ data?.lastname }} </a>
+
+        <!-- Profile -->
+        <button
+          type="button"
+          class="btn btn-outline-light settings"
+          routerLink="/profile"
+          *ngIf="isLoggedIn"
+        >
+        <mat-icon   matSuffix class="icon">settings</mat-icon>
+        </button>
+
+      
+        
+
+        <!-- Logout -->
+ <!-- -----NgIF----funcion que muestra el boton solo si el usuario esta logueado------------- -->
+        <button
+          type="button"
+          class="btn btn-outline-light logout"
+          (click)="logout()"
+         
+          *ngIf="isLoggedIn"
+        >
+        <mat-icon   matSuffix class="icon">logout</mat-icon>
+        </button>
+
+        
+      </div>
+    </div>
+  </div>
+</nav>

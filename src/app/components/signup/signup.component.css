@@ -1,0 +1,126 @@
+/* color de los campos dependiendo si los datos son validos o no */
+.ng-invalid.ng-touched:not(form) {
+    border-left:5px solid red;
+}
+.ng-valid:not(form) {
+    border-left:5px solid green;
+}
+
+.logoFormulario {
+    display: flex;
+    justify-content: center;
+
+}
+
+.card {
+    
+    /* Cambia el valor según tus necesidades */
+
+    margin: 0 auto
+}
+
+.row{
+     width: 200px;
+}
+
+.card-body {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mb-3 {
+    flex: 50%;
+}
+  /* letras del label en Negrita */
+.form-label{
+    font-weight: bold;
+}
+
+  /* Grid de los campos del  formulario */
+.formulario{
+
+  display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+   grid-template-rows: auto;     
+        gap: 15px;
+        padding: 15px;
+    
+}
+
+.container{
+    padding-top: 15px;
+}
+/* ---------------------color de los botones---------------------------------  */
+.mat-mdc-fab.mat-accent.registrar{ 
+    --mdc-fab-container-color: #2A6CB9;
+}
+
+.mat-mdc-fab.mat-accent.cancelar{   
+    --mdc-fab-container-color: #e93838;
+}
+
+.mat-mdc-fab.mat-accent.buscar{  
+    --mdc-fab-container-color: #39c3e3;
+}
+
+
+.mat-mdc-fab.mat-accent.limpiar{   
+    --mdc-fab-container-color: #ed2e38;
+}
+
+
+
+.mat-mdc-fab.mat-accent.reportes{   
+    --mdc-fab-container-color: #2f7965;
+}
+
+.mat-mdc-fab.mat-accent.carga{  
+    --mdc-fab-container-color: #e65f12d8;
+}
+
+
+
+
+
+  /* Grid de los botones del  formulario */
+
+  .botones{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+    grid-template-rows: auto;  
+    gap: 25px;
+    padding: 10px;
+
+  }
+
+  .boton {
+
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+  
+    display:flex;
+    text-align: right;
+}
+
+span{
+    padding-right: 10px;
+}
+
+/* ---------------Iconos del formulario en inputs------------------- */
+
+.select-icon  {
+    position: relative;
+}
+
+.select-icon .material-icons{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 2px;
+}
+
+.mdc-fab {
+    padding-right: 10px;
+}

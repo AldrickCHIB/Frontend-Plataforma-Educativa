@@ -1,0 +1,67 @@
+<!-- nabvar del login:  -->
+
+<app-navbar-login></app-navbar-login>
+
+<!-- contenido login -->
+<div class="container">
+  <div class="formulario">
+    <div class="col-8 mx-auto">
+      <div class="card">
+        <div class="card-body">
+          <div>
+            <form id="registerform" autocomplete="off"  [formGroup]="loginForm" (ngSubmit)="login()" >
+<!-- -------------------------Titulo--------------------------------------------------------------- -->
+              <div class="card-title">Iniciar Sesión</div>
+<!-- ----------------------------Nombre de Usuario----------------------------------------------- -->
+                 <div class="mb-3">
+                        <label for="email" class="form-label">Nombre de Usuario</label>
+                          <div class="input-icon">
+                            <input type="email"  class="form-control input-with-icon"  id="email" formControlName="email"  required />
+                            <mat-icon   class="input-icon" matSuffix>person</mat-icon>
+                         </div>
+                </div>
+                  <!-- ------------mensaje de error:nombre----------------- -->
+                <div class="alert alert-danger" [hidden]="!campoNoValido('email')" >
+                       <p *ngIf="campoNoValido('email')">El correo es obligatorio</p>
+                </div>
+<!-- -------------------------Contraseña----------------------------- -->
+                <div class="mb-3">
+                        <label for="password" class="form-label">Contraseña </label>
+                        <div class="input-icon">
+                             <input type="password"  class="form-control input-with-icon"  id="password"  formControlName="password"  required  placeholder=""  />
+                             <mat-icon  class="input-icon" matSuffix>lock</mat-icon>
+                             </div>
+                </div>
+                <!-- ------------mensaje de error:nombre----------------- -->
+                <div  class="alert alert-danger"  [hidden]="!campoNoValido('password')"  >
+                      <p *ngIf="campoNoValido('password')">
+                        La contraseña es obligatoria
+                     </p>
+               </div>
+
+               <div  class="botones"    justify-content="space-between"  >
+                
+                  
+                             <div class="remember">
+                                        <label for="checkbox-signup" class="text"> Remember me </label>
+                                
+
+                                 
+                                        <input id="checkbox-signup"  type="checkbox"  class="filled-in chk-col-light-blue"  formControlName="remember" />
+                            </div>         
+
+                             <div class="acceder">   
+                                        <button   type="submit"   class="btn btn-primary"   (click)="login()"  >   Acceder   </button>
+                              </div> 
+                                 
+             
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+|

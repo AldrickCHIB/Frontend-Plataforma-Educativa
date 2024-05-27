@@ -1,0 +1,16 @@
+<div class="containe fluid">
+
+
+  <div class="body">
+    <router-outlet></router-outlet>
+  </div>
+<!-- footer 1 y 2 desaparecen segun el logueo o deslogueo del usuario y si esta en la pagina perfil o no -->
+  <div class="footer" *ngIf="!mostrarComponente">
+    <app-footer></app-footer>
+  </div>
+
+  <div class="footer2" *ngIf="mostrarComponente">
+    <app-footer2></app-footer2>
+  </div>
+
+</div>

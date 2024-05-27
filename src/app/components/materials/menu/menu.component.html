@@ -1,0 +1,115 @@
+
+<button
+class="listmenu"
+
+style="background-color: #2A6CB9; color:aliceblue "
+  mat-icon-button
+  [matMenuTriggerFor]="menu"
+  aria-label="Example icon-button with a menu"
+  
+  
+>
+  <mat-icon class="icon">dehaze</mat-icon> 
+</button>
+
+
+<!-- menu desplegable -->
+<mat-menu #menu="matMenu">
+ <!--  -------------------boton principal y sus opciones----------------- -->
+  <button mat-menu-item [matMenuTriggerFor]="principal"  >
+    <mat-icon>house</mat-icon>
+    <span>Principal</span>
+  </button>
+
+       <mat-menu #principal="matMenu">
+
+          <button  mat-menu-item  routerLink="/profile/principal/inicio" routerLinkActive="active"
+            >
+          <mat-icon>home</mat-icon>
+           <span  >Inicio</span>
+            </button>
+
+            <button mat-menu-item>
+                <mat-icon> description</mat-icon>
+                 <span>Circulares</span>
+                  </button>
+
+                  <button mat-menu-item>
+                    <mat-icon>calendar_month</mat-icon>
+                     <span>Calendario</span>
+                      </button>
+
+                      <button mat-menu-item>
+                        <mat-icon>
+                            assignment_ind
+                            </mat-icon>
+                         <span>Seguimiento de Alumno</span>
+                          </button>
+
+
+                          <button mat-menu-item>
+                            <mat-icon>
+                                supervisor_account</mat-icon>
+                                
+                             <span>Seguimiento de Padre de Familia</span>
+                              </button>
+
+                              <button mat-menu-item>
+                                <mat-icon>
+                                    3p</mat-icon>
+                                 <span>Seguimiento de Profesor</span>
+                                  </button>
+  
+       </mat-menu>
+
+ <!--  -------------------boton mi cuenta y sus opciones(sin flujo aun)----------------- -->
+  <button mat-menu-item>
+    <mat-icon>person</mat-icon>
+    <span>Mi Cuenta</span>
+  </button>
+<!--  -------------------boton mis crusos y sus opciones(sin flujo aun)----------------- -->
+  <button mat-menu-item>
+    <mat-icon>event_note</mat-icon>
+    <span>Mis Cursos</span>
+  </button>
+
+  <!--  -------------------boton Administracion Escolar y sus opciones(sin flujo aun)----------------- -->
+  <button mat-menu-item>
+    <mat-icon>admin_panel_settings</mat-icon>
+    <span>Administración Escolar</span>
+  </button>
+
+ <!--  -------------------boton Configuracion y sus opciones----------------- -->
+  <button mat-menu-item [matMenuTriggerFor]="configuracion">
+    <mat-icon>tune </mat-icon>
+    <span>Configuración</span>
+  </button>
+
+           <mat-menu #configuracion="matMenu">
+
+                 <button mat-menu-item>
+                 <mat-icon>school</mat-icon>
+                 <span>Mi escuela</span>
+               </button>
+
+               <button mat-menu-item routerLink="/profile/configuracion/usuarios" routerLinkActive="active">
+                <mat-icon>group</mat-icon>
+                <span>Usuarios</span>
+              </button>
+
+              <button mat-menu-item>
+                <mat-icon>view_module</mat-icon>
+                <span>Módulos</span>
+              </button>
+
+              <button mat-menu-item>
+                <mat-icon>manage_accounts</mat-icon>
+                <span>Personalizar</span>
+              </button>
+
+           </mat-menu>
+</mat-menu>
+
+
+
+
