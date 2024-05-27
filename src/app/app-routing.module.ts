@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes, CanActivate, CanActivateFn, CanMatchFn } from '@angular/router';
 
 //ruta principal Home
-import { HomeComponent } from "./components/home/home.component";
 //ruta login principal
 import { LoginComponent } from './components/login/login.component';
 //Rutas ya logueado
@@ -24,6 +23,7 @@ import { authGuard } from "./guards/auth.guard";
 import { NotFoundComponent } from "./components/not-found/not-found.component";
 import { hasRoleGuard } from './guards/has-role.guard';
 import { TwoFactorAuthComponent } from './components/two-factor-auth/two-factor-auth.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 const routes: Routes = [
